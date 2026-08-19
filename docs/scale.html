@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gross &amp; scale — Lunch Club pilot</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">I LOVE TERIYAKI<em>for the shop</em></div>
+      <nav>
+        <a href="index.html">Catering</a>
+        <a href="menu.html">Boxes</a>
+        <a href="pilot.html">For the shop</a>
+        <a href="scale.html">Gross</a>
+      </nav>
+    </div>
+
+    <p class="kicker">Meals × drops × shops</p>
+    <h1>Scale meal count. Do not scale the menu.</h1>
+    <p class="lede">
+      One account = one weekly drop of 12 boxes. Folsom first. Power Inn copies the same six boxes. Other shops only after two groups reorder at full price.
+    </p>
+    <img src="images/office-drop.jpg" alt="Labeled lunch boxes ready for an office drop" style="width:100%;height:340px;object-fit:cover;border:1px solid var(--line);margin-bottom:8px" />
+    <p class="caption">8 Folsom accounts is 96 meals a week on the grill you already run — not 20 new recipes.</p>
+
+    <div class="grid-2">
+      <div class="calc" id="calc">
+        <h3 style="color:#f6f0e6">Pilot calculator</h3>
+        <p class="muted" style="color:#d9cbb8">Invoice-side. Uber is extra at higher list prices.</p>
+        <div class="row">
+          <div>
+            <label for="accounts">Weekly accounts</label>
+            <input id="accounts" type="range" min="1" max="20" value="3" />
+            <div id="accountsLabel">3</div>
+          </div>
+          <div>
+            <label for="boxes">Boxes per drop</label>
+            <select id="boxes">
+              <option value="10">10 · Office</option>
+              <option value="12" selected>12 · Campus / office</option>
+              <option value="24">24 · Floor</option>
+            </select>
+          </div>
+        </div>
+        <label for="price">Avg $ per box (invoice)</label>
+        <input id="price" type="range" min="12" max="16" step="0.5" value="12.5" />
+        <div id="priceLabel">$12.50</div>
+        <div class="row" style="margin-top:18px">
+          <div class="out"><span>Meals / week</span><b id="meals">36</b></div>
+          <div class="out"><span>Gross / week</span><b id="week">$450</b></div>
+        </div>
+        <div class="row" style="margin-top:12px">
+          <div class="out"><span>Gross / month</span><b id="month">$1,949</b></div>
+          <div class="out"><span>After 40% food+pack</span><b id="net">$1,169</b></div>
+        </div>
+      </div>
+      <div>
+        <h3>How this becomes more meals</h3>
+        <ol>
+          <li><strong>Days 1–14, Folsom.</strong> Pack-test. 3 paid drops. Two reorders.</li>
+          <li><strong>Days 15–45.</strong> 6–8 weekly accounts on Blue Ravine, FLC, Iron Point.</li>
+          <li><strong>Power Inn.</strong> Same boxes. Jobsite 10. No new menu.</li>
+          <li><strong>Events on top.</strong> Harris Center crews, Saturday tournaments — extra meals, not instead of Tuesdays.</li>
+          <li><strong>Next location.</strong> Photos of your 12-pack + two named accounts. That is the franchise playbook.</li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>Gross snapshots (12 boxes at $12.50)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th class="num">Accounts</th>
+          <th class="num">Meals / week</th>
+          <th class="num">Gross / week</th>
+          <th class="num">Gross / month</th>
+          <th class="num">After food+pack ~60%</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>14-day test</td>
+          <td class="num">3</td>
+          <td class="num">36</td>
+          <td class="num">$450</td>
+          <td class="num">$1,949</td>
+          <td class="num">$1,169</td>
+        </tr>
+        <tr>
+          <td>Folsom book</td>
+          <td class="num">8</td>
+          <td class="num">96</td>
+          <td class="num">$1,200</td>
+          <td class="num">$5,196</td>
+          <td class="num">$3,118</td>
+        </tr>
+        <tr>
+          <td>Both shops</td>
+          <td class="num">14</td>
+          <td class="num">168</td>
+          <td class="num">$2,100</td>
+          <td class="num">$9,093</td>
+          <td class="num">$5,456</td>
+        </tr>
+        <tr>
+          <td>Both + 4 crew drops/mo</td>
+          <td class="num">14 + events</td>
+          <td class="num">~220</td>
+          <td class="num">~$2,750</td>
+          <td class="num">~$11,900</td>
+          <td class="num">~$7,100</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Same 12 people: DoorDash vs Lunch Club</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="num">12 chicken plates on Dash ($12.99)</th>
+          <th class="num">Office 12 invoice</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>They pay</td>
+          <td class="num">~$156 + app fees</td>
+          <td class="num">$150</td>
+        </tr>
+        <tr>
+          <td>Marketplace</td>
+          <td class="num">~30% · ~$47</td>
+          <td class="num">$0</td>
+        </tr>
+        <tr>
+          <td>Kitchen sees before food</td>
+          <td class="num">~$109</td>
+          <td class="num good">$150</td>
+        </tr>
+        <tr>
+          <td>Meals</td>
+          <td class="num">12, maybe once</td>
+          <td class="num good">12 every Tuesday</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <a class="cta" href="menu.html">Approve the six boxes</a>
+      <a class="cta ghost" href="index.html">14-day terms</a>
+    </p>
+    <p class="note">Not a sales guarantee. Confirm Uber commission in Manager. Confirm food cost in the Folsom pack test. Month = 4.33 weeks.</p>
+  </div>
+  <script>
+    function money(n) {
+      return n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+    }
+    function render() {
+      var accounts = Number(document.getElementById("accounts").value);
+      var boxes = Number(document.getElementById("boxes").value);
+      var price = Number(document.getElementById("price").value);
+      var meals = accounts * boxes;
+      var week = meals * price;
+      var month = week * 4.33;
+      document.getElementById("accountsLabel").textContent = accounts;
+      document.getElementById("priceLabel").textContent = "$" + price.toFixed(2);
+      document.getElementById("meals").textContent = String(meals);
+      document.getElementById("week").textContent = money(week);
+      document.getElementById("month").textContent = money(month);
+      document.getElementById("net").textContent = money(month * 0.6);
+    }
+    ["accounts", "boxes", "price"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", render);
+      document.getElementById(id).addEventListener("change", render);
+    });
+    render();
+  </script>
+</body>
+</html>
