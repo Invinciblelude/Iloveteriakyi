@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offices, campus &amp; crews — Teriyaki Stop Lunch Club</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">TERIYAKI STOP<em>lunch club</em></div>
+      <nav>
+        <a href="index.html">Catering</a>
+        <a href="menu.html">Boxes</a>
+        <a href="audience.html">Groups</a>
+        <a href="pilot.html">For the shop</a>
+      </nav>
+    </div>
+
+    <p class="kicker">Who this is for</p>
+    <h1>YOU BUY LUNCH FOR A TABLE.<span class="love">We box it. You stop organizing it.</span></h1>
+    <p class="lede">
+      Offices, campus clubs, and crews. Ten or twenty labeled plates. One drop. Same weekday. Not a cafeteria contract — a Tuesday that already happens.
+    </p>
+    <div class="pills">
+      <span class="pill">10 meals = 10% off</span>
+      <span class="pill">20 or 50 = 20% off</span>
+      <span class="pill">24-hour notice</span>
+      <span class="pill">Cap 40 until timed</span>
+    </div>
+
+    <div class="grid-3" style="margin-top:28px">
+      <article class="card photo-card" id="office">
+        <img src="images/honey-spicy.jpg" alt="Honey spicy chicken plate for an office lunch drop" />
+        <div class="pad">
+          <div class="tag">Offices</div>
+          <h3>Iron Point · Broadstone · Power Inn</h3>
+          <p>One person orders for the floor. Team 10 or Routine 20. Labeled lids. Pickup free at Folsom or Power Inn; nearby drop is a small fee.</p>
+          <p class="muted">Best fit: 8–20 people who already eat together on a weekday.</p>
+          <a class="cta" href="#book" style="margin-top:12px">Book an office drop</a>
+        </div>
+      </article>
+      <article class="card photo-card" id="campus">
+        <img src="images/chicken-plate.jpg" alt="Chicken teriyaki plate for a campus club drop" />
+        <div class="pad">
+          <div class="tag">Campus</div>
+          <h3>Folsom Lake College</h3>
+          <p>Clubs, faculty, athletics — 12 boxes at your building around 11:30. A mile from Blue Ravine. Invoice or one card. Not the cafeteria.</p>
+          <p class="muted">Best fit: student orgs, staff meetings, team meals. Not K-12.</p>
+          <a class="cta" href="#book" style="margin-top:12px">Book a campus drop</a>
+        </div>
+      </article>
+      <article class="card photo-card" id="crew">
+        <img src="images/sesame-chicken.jpg" alt="Sesame chicken plate that holds for crew meals" />
+        <div class="pad">
+          <div class="tag">Crews</div>
+          <h3>Harris Center · jobsites · events</h3>
+          <p>Sesame and chicken hold. 15–25 labeled boxes, 48-hour notice for events. Harris Center = crew meals only — not lobby food inside the theaters.</p>
+          <p class="muted">Best fit: load-in, tech week, tournament Saturday. Cap 40.</p>
+          <a class="cta" href="#book" style="margin-top:12px">Book a crew drop</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>What you get vs what you skip</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>This is you</th>
+          <th>Call someone else</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Size</td>
+          <td class="good">10, 12, 20, or 50 prepaid over the month</td>
+          <td>80 people at 11:50, or a school cafeteria</td>
+        </tr>
+        <tr>
+          <td>Who pays</td>
+          <td class="good">One invoice, one card, or Uber group order 10+</td>
+          <td>Twelve people on DoorDash</td>
+        </tr>
+        <tr>
+          <td>Food</td>
+          <td class="good">Board plates: chicken, honey spicy, Thai, sesame, beef, shrimp</td>
+          <td>Sushi, salmon, short ribs, tempura in a stack</td>
+        </tr>
+        <tr>
+          <td>When</td>
+          <td class="good">Same weekday, 24-hour notice, pause with a text</td>
+          <td>Same-day surprise for 40</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="muted">K-12 student lunch is out (California school-meal rules). Intel / Micron cafeteria RFPs are out. Small teams at those campuses can still book a 10.</p>
+
+    <div class="orderbox" id="book">
+      <h2>Tell us who you are. We’ll lock a Tuesday.</h2>
+      <p class="lede" style="max-width:none">This builds the exact line to text or call Folsom. 24-hour notice. First drop can be Team 10.</p>
+      <form id="capture" novalidate>
+        <div class="form-grid">
+          <label>
+            You are
+            <select id="who" name="who" required>
+              <option value="Office">Office / floor</option>
+              <option value="Campus">Campus club / faculty / team</option>
+              <option value="Crew">Crew / jobsite / event</option>
+            </select>
+          </label>
+          <label>
+            Your name
+            <input id="person" name="person" type="text" autocomplete="name" required placeholder="First name" />
+          </label>
+          <label class="span-2">
+            Company, club, or building
+            <input id="org" name="org" type="text" required placeholder="e.g. Iron Point, FLC Student Life, Harris load-in" />
+          </label>
+          <label>
+            How many meals
+            <select id="pack" name="pack" required>
+              <option value="Team 10">Team 10 · 10% off</option>
+              <option value="Campus 12">Campus 12</option>
+              <option value="Routine 20" selected>Routine 20 · 20% off</option>
+              <option value="Month 50">Month 50 · prepaid</option>
+              <option value="Crew 15–25">Crew 15–25</option>
+            </select>
+          </label>
+          <label>
+            Favorite
+            <select id="fav" name="fav" required>
+              <option value="Chicken Teriyaki">Chicken Teriyaki</option>
+              <option value="Honey Spicy Chicken" selected>Honey Spicy Chicken</option>
+              <option value="Thai Chicken">Thai Chicken</option>
+              <option value="Sesame Chicken">Sesame Chicken</option>
+              <option value="Beef Teriyaki">Beef Teriyaki</option>
+              <option value="Shrimp">Shrimp</option>
+              <option value="mix">Mix — tell us in the call</option>
+            </select>
+          </label>
+          <label>
+            Weekday
+            <select id="day" name="day" required>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+            </select>
+          </label>
+          <label>
+            Window
+            <select id="time" name="time" required>
+              <option>11:30</option>
+              <option selected>11:45</option>
+              <option>12:00</option>
+              <option>12:15</option>
+            </select>
+          </label>
+          <label>
+            Your phone
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="(916) 555-0100" />
+          </label>
+          <label>
+            Shop
+            <select id="shop" name="shop" required>
+              <option value="Folsom">Folsom · 185 Blue Ravine</option>
+              <option value="Power Inn">Power Inn · 5301 Power Inn</option>
+            </select>
+          </label>
+        </div>
+        <div class="actions" style="margin-top:18px">
+          <button class="cta" type="submit">Build my drop request</button>
+          <a class="cta ghost" href="tel:19163575202">Or call Folsom now</a>
+        </div>
+      </form>
+      <div id="result" class="capture-result" hidden>
+        <h3>Send this. That’s the order.</h3>
+        <pre id="script"></pre>
+        <div class="actions">
+          <a class="cta" id="smsLink" href="#">Text Folsom</a>
+          <a class="cta" id="callLink" href="tel:19163575202">Call Folsom</a>
+          <button class="cta ghost" type="button" id="copyBtn">Copy</button>
+        </div>
+        <p class="muted" id="copyNote"></p>
+      </div>
+    </div>
+    <p class="note">
+      Folsom (916) 357-5202 · Power Inn (916) 383-1866. Neighbors who want the $10 member plate use the
+      <a href="index.html#club">community club</a> — that is seven meals, not one office drop.
+    </p>
+  </div>
+  <div class="sticky">
+    <span>OFFICES · CAMPUS · CREWS&nbsp;&nbsp;·&nbsp;&nbsp;10 OR 20 LABELED BOXES</span>
+    <a href="#book">Book a drop</a>
+  </div>
+  <script>
+    function shopPhone(shop) {
+      return shop === "Power Inn" ? "19163831866" : "19163575202";
+    }
+    function smsHref(phone, body) {
+      var encoded = encodeURIComponent(body);
+      var ios = /iPad|iPhone|iPod/i.test(navigator.userAgent);
+      return ios ? "sms:+" + phone + "&body=" + encoded : "sms:+" + phone + "?body=" + encoded;
+    }
+    function line() {
+      var who = document.getElementById("who").value;
+      var person = document.getElementById("person").value.trim();
+      var org = document.getElementById("org").value.trim();
+      var pack = document.getElementById("pack").value;
+      var fav = document.getElementById("fav").value;
+      var day = document.getElementById("day").value;
+      var time = document.getElementById("time").value;
+      var phone = document.getElementById("phone").value.trim();
+      var shop = document.getElementById("shop").value;
+      return (
+        "Lunch Club drop — " + who + "\n" +
+        person + " / " + org + "\n" +
+        pack + " · " + fav + "\n" +
+        day + "s " + time + " · " + shop + "\n" +
+        "Callback " + phone + "\n" +
+        "24-hour notice. Invoice or pickup."
+      );
+    }
+    document.getElementById("capture").addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (!document.getElementById("capture").reportValidity()) return;
+      var msg = line();
+      var shop = document.getElementById("shop").value;
+      var phone = shopPhone(shop);
+      document.getElementById("script").textContent = msg;
+      document.getElementById("smsLink").href = smsHref(phone, msg);
+      document.getElementById("callLink").href = "tel:" + phone;
+      document.getElementById("callLink").textContent = shop === "Power Inn" ? "Call Power Inn" : "Call Folsom";
+      document.getElementById("smsLink").textContent = shop === "Power Inn" ? "Text Power Inn" : "Text Folsom";
+      document.getElementById("result").hidden = false;
+      document.getElementById("copyNote").textContent = "";
+      document.getElementById("result").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+    document.getElementById("copyBtn").addEventListener("click", function () {
+      var msg = document.getElementById("script").textContent;
+      navigator.clipboard.writeText(msg).then(function () {
+        document.getElementById("copyNote").textContent = "Copied. Paste into a text to the shop.";
+      });
+    });
+  </script>
+</body>
+</html>

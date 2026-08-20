@@ -60,8 +60,8 @@ a { color: var(--gold); }
 }
 .brand {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 44px;
-  letter-spacing: 0.06em;
+  font-size: 40px;
+  letter-spacing: 0.08em;
   line-height: 0.85;
 }
 .brand em {
@@ -365,12 +365,67 @@ td.good { background: rgba(125, 206, 122, 0.08); }
 
 .note { font-size: 13px; color: var(--ink-soft); margin-top: 24px; }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+.form-grid .span-2 { grid-column: 1 / -1; }
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6a5344;
+}
+.form-grid input,
+.form-grid select {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid #c4a574;
+  padding: 10px 12px;
+}
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: 2px solid var(--glaze);
+  border-color: var(--glaze);
+}
+button.cta {
+  border: 0;
+  cursor: pointer;
+  font-family: "Bebas Neue", sans-serif;
+}
+.capture-result {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 2px dashed var(--glaze);
+}
+.capture-result pre {
+  white-space: pre-wrap;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.45;
+  margin: 10px 0 16px;
+}
+.photo-card .cta { display: inline-block; font-size: 18px; padding: 10px 14px; }
+
 @media (max-width: 800px) {
   h1 { font-size: 44px; }
   .brand { font-size: 32px; }
   .wordmark { font-size: clamp(64px, 22vw, 120px); margin: 4px 0 16px; }
   h2 { font-size: 32px; }
-  .hero, .stats, .why, .grid-2, .grid-3, .menu-grid, .tiers { grid-template-columns: 1fr; }
+  .hero, .stats, .why, .grid-2, .grid-3, .menu-grid, .tiers, .form-grid { grid-template-columns: 1fr; }
+  .form-grid .span-2 { grid-column: auto; }
   .hero img, .fullbleed { height: 260px; }
   .tier.best { transform: none; }
   .tier:before, .tier:after { display: none; }
